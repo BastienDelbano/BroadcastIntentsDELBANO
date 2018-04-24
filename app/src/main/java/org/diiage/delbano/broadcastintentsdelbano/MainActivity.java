@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context ctxt, Intent intent) {
             batteryLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
             batteryTxt.setText(String.valueOf(batteryLevel) + "%");
-            if (batteryLevel <= 85){
+            if (batteryLevel < 85){
                 Toast.makeText(ctxt, "Y a plus de battery",
                         Toast.LENGTH_LONG).show();
             }
